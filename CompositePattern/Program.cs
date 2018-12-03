@@ -1,4 +1,5 @@
-﻿using CompositePattern.MotorbikeConcept;
+﻿using CompositePattern.ECigaretteConcept;
+using CompositePattern.MotorbikeConcept;
 using System;
 
 namespace CompositePattern
@@ -19,15 +20,25 @@ namespace CompositePattern
 
 
             // Motorbike example
-            IMotorbike baseClass = new Motorbike();
-            IMotorbike customObject = baseClass;
+            //IMotorbike baseClass = new Motorbike();
+            //IMotorbike customObject = baseClass;
 
-            customObject.StartEngine();
-            customObject = new Triumph(baseClass);
-            customObject.StartEngine();
-            customObject.PowerOnLights();
-            customObject = new HarleyDavidson(baseClass);
-            customObject.PowerOnLights();
+            //customObject.StartEngine();
+            //customObject = new Triumph(baseClass);
+            //customObject.StartEngine();
+            //customObject.PowerOnLights();
+            //customObject = new HarleyDavidson(baseClass);
+            //customObject.PowerOnLights();
+
+            // ECigarette example
+            IECigarette eCigarette = new ECigarette();
+            Console.WriteLine("Price for regular cig: " + eCigarette.GetPrice().ToString());
+            eCigarette = new Ego(eCigarette);
+            Console.WriteLine("Price for Ego cig: " + eCigarette.GetPrice().ToString());
+            eCigarette = new VapingShelter(eCigarette);
+            Console.WriteLine("Price for VapingShelter cig: " + eCigarette.GetPrice().ToString());
+            eCigarette = new TheatricalFake(eCigarette);
+            Console.WriteLine("Price for TheatricalFake cig: " + eCigarette.GetPrice().ToString());
 
             Console.Read();
         }
