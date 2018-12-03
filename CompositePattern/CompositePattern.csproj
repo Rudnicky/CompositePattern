@@ -43,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmployeeConcept\Employee.cs" />
+    <Compile Include="MotorbikeConcept\HarleyDavidson.cs" />
+    <Compile Include="MotorbikeConcept\IMotorbike.cs" />
+    <Compile Include="MotorbikeConcept\Motorbike.cs" />
+    <Compile Include="MotorbikeConcept\Triumph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EmployeeConcept\TeamLeader.cs" />
